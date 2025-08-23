@@ -1,0 +1,73 @@
+/* 1. Standard Tailwind imports (these must be first) */
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. All your customizations go inside this @theme block */
+@theme {
+  /* -- Colors -- */
+  /* Replaces the `colors` object */
+  --color-primary: #2563eb; /* Now useable as `bg-primary`, `text-primary`, etc. */
+  --color-secondary: #9333ea; /* `bg-secondary` */
+  --color-accent: #f59e0b; /* `bg-accent` */
+  --color-background: #f9fafb; /* `bg-background` */
+  --color-dark: #111827; /* `bg-dark` */
+
+  /* -- Fonts -- */
+  /* Replaces `fontFamily` in the config */
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-heading: "Poppins", sans-serif; /* Now useable as `font-heading` */
+
+  /* -- Animations -- */
+  /* Replaces `animation` in the config */
+  --animation-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animation-fade-in-up: fadeIn 0.5s ease-out forwards; /* Now useable as `animate-fade-in-up` */
+
+  /* -- Keyframes -- */
+  /* The `@keyframes` rule goes directly inside @theme */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 3. Your custom CSS components (like .btn-shine) go after the @theme block */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.btn-shine:hover::after {
+  opacity: 1;
+  transform: translate(25%, 25%) rotate(45deg);
+}
+
+.clip-diagonal {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

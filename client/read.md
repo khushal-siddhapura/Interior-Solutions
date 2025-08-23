@@ -1,0 +1,9 @@
+PORT=4000
+MONGO_URI=mongodb+srv://siddhapurakhushal:Skhushal2025@cluster0.eka0qlo.mongodb.net/Interior_Solution?retryWrites=true&w=majority
+JWT_SECRET=DY2025@abc123Solutions
+JWT_EXPIRES_IN=7d
+COOKIE_NAME=admin_token
+COOKIE_SECURE=false
+FRONTEND_URL=http://localhost:5173
+SUPERADMIN_EMAIL=superadmin@example.com
+SUPERADMIN_PASSWORD=SuperSecretPassword123
