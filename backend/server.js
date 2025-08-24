@@ -49,11 +49,7 @@ app.use(express.urlencoded({ extended: true }));
 //   })
 // );
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors({ origin: "*", credentials: true }));
 
 app.use(compression());
 
