@@ -29,7 +29,10 @@ const Contact = ({ preview = false }) => {
     setFormStatus({ message: "", type: "" }); // Clear previous status
 
     try {
-      await axios.post("http://localhost:5001/api/public/contact", data);
+      await axios.post(
+        "https://interior-solutions.onrender.com/api/public/contact",
+        data
+      );
       setFormStatus({
         message: "Message sent! We'll be in touch soon.",
         type: "success",

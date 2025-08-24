@@ -38,7 +38,7 @@ const Products = ({ preview = false }) => {
         try {
           // Assuming your backend is running on port 5001
           const { data } = await axios.get(
-            "http://localhost:5001/api/public/products"
+            "https://interior-solutions.onrender.com/api/public/products"
           );
           setProducts(data);
         } catch (err) {

@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Create an Axios instance with a base URL for all requests
 const api = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: "https://interior-solutions.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

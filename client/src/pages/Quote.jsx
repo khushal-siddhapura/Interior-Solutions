@@ -46,9 +46,13 @@ const Quote = ({ preview = false }) => {
     });
 
     try {
-      await axios.post("http://localhost:5001/api/public/quote", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      await axios.post(
+        "https://interior-solutions.onrender.com/api/public/quote",
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
 
       setFormStatus({
         message: "Request sent! We'll get back to you soon.",

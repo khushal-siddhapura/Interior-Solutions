@@ -153,10 +153,13 @@ const LoginPage = () => {
   const handleLogin = async (data) => {
     const { email, password } = data;
 
-    const promise = axios.post("http://localhost:5001/api/auth/login", {
-      email,
-      password,
-    });
+    const promise = axios.post(
+      "https://interior-solutions.onrender.com/api/auth/login",
+      {
+        email,
+        password,
+      }
+    );
 
     try {
       const res = await toast.promise(promise, {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/admins/";
+const API_URL = "https://interior-solutions.onrender.com/api/admins/";
 
 // Helper function to get the auth token
 const getToken = () => localStorage.getItem("token");

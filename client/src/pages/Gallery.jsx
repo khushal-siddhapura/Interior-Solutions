@@ -19,7 +19,7 @@ const Gallery = ({ preview = false, limit = 6 }) => {
       try {
         // We use the public gallery route we created earlier
         const { data } = await axios.get(
-          "http://localhost:5001/api/public/gallery"
+          "https://interior-solutions.onrender.com/api/public/gallery"
         );
 
         // We transform the data from the backend to match the format your

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/submissions/";
+const API_URL = "https://interior-solutions.onrender.com/api/submissions/";
 const getToken = () => localStorage.getItem("token");
 const getAuthHeaders = () => ({
   headers: { Authorization: `Bearer ${getToken()}` },

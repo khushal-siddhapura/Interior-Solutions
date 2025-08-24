@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Enable CORS
 const corsOptions = {
-  origin: "http://localhost:5173", // Your React app's address
+  origin: "https://interior-solutions-three.vercel.app/", // Your React app's address
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));

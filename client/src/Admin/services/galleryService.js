@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/api/gallery/";
+const API_URL = "https://interior-solutions.onrender.com/api/gallery/";
 const getToken = () => localStorage.getItem("token");
 
 export const uploadImage = (formData) => {
