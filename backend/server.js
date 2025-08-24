@@ -21,12 +21,33 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Enable CORS
-const corsOptions = {
-  origin: "https://interior-solutions-three.vercel.app/", // Your React app's address
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// // Enable CORS
+// const corsOptions = {
+//   origin: "https://interior-solutions-three.vercel.app/", // Your React app's address
+//   optionsSuccessStatus: 200,
+// };
+// app.use(cors(corsOptions));
+
+// Allow list of frontend origins
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://interior-solutions-three.vercel.app", // Vercel preview or main site
+  "https://interiorsolutions.co.in", // Your custom domain
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 
 app.use(compression());
 
