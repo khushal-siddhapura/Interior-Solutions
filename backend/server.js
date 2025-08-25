@@ -54,7 +54,7 @@ const allowedOrigins = [
   "https://interior-solutions-three.vercel.app", // your Vercel frontend
 ];
 
-app.use(
+app.use(  
   cors({
     origin: function (origin, callback) {
       // allow requests with no origin (like mobile apps, curl, Postman)
