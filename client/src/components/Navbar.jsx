@@ -54,15 +54,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 ">
             {/* Brand Logo/Name */}
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex-shrink-0"
               onClick={(e) => {
-                if (window.location.pathname === '/') {
+                if (window.location.pathname === "/") {
                   e.preventDefault();
                   window.scrollTo({
                     top: 0,
-                    behavior: 'smooth'
+                    behavior: "smooth",
                   });
                 }
               }}
@@ -111,13 +111,13 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-transparent bg-opacity-50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-60 bg-transparent bg-opacity-50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMenuOpen(false)}
       />
       <div
-        className={`fixed top-0 right-0 z-40 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-60 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
