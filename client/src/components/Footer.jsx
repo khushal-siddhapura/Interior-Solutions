@@ -19,8 +19,14 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: <FiFacebook size={20} />, href: "#" },
-    { icon: <FiInstagram size={20} />, href: "#" },
+    {
+      icon: <FiFacebook size={20} />,
+      href: "https://www.facebook.com/profile.php?id=100069126367573/",
+    },
+    {
+      icon: <FiInstagram size={20} />,
+      href: "https://www.instagram.com/interiorsolutionofficial2025/",
+    },
     { icon: <FiLinkedin size={20} />, href: "#" },
   ];
 
